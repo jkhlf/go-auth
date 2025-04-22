@@ -22,10 +22,15 @@ func main() {
 		http.ListenAndServe(":8080", nil)
 }
 
-func register (w http.ResponseWriter, r *http.Request) {}
+func register (w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodPost {
+		er := http.StatusMethodNotAllowed
+		http.Error(w, "Invalid method", er)
+		return
+}
+}
 
 func login (w http.ResponseWriter, r *http.Request) {}
-
 
 func logout (w http.ResponseWriter, r *http.Request) {}
 
