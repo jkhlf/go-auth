@@ -21,3 +21,16 @@ func main() {
     http.HandleFunc("/protected", protected)
 		http.ListenAndServe(":8080", nil)
 }
+
+func register (w http.ResponseWriter, r *http.Request) {}
+
+func login (w http.ResponseWriter, r *http.Request) {}
+
+
+func logout (w http.ResponseWriter, r *http.Request) {}
+
+
+func protected (w http.ResponseWriter, r *http.Request) {}
+
+
+
